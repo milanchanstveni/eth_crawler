@@ -33,7 +33,8 @@ with ST.form("wallet_form", True):
             dateInput = None
 
         with ST.spinner(f"Loading for {walletInput}..."):
-            data = getFilteredTransactions(walletInput.strip(), blockInput, dateInput)
+            data    = getFilteredTransactions(walletInput.strip(), blockInput, dateInput)
+            balance = getBalance(walletInput.strip())
         
         if len(data) == 0:
             notificationBox.warning("No data found for given wallet!")
@@ -41,6 +42,7 @@ with ST.form("wallet_form", True):
         
         #contentBox = ST.container()
         with ST.container():
+            ST.subheader(f"Current wallet balance: {balance} ETH")
             for block in data:
                 with ST.expander(f"Block: {block.number}\n {block.hash.hex()}"):
                     tabOverview, tabTxs = ST.tabs(["Overview", "Transactions"])
