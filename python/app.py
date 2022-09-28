@@ -20,7 +20,6 @@ with ST.form("wallet_form", True):
     formSubmit:  bool      = ST.form_submit_button("Check")
     data:        Any       = None
     if formSubmit:
-        print(blockInput)
         notificationBox.empty()
 
         if walletInput is None or not isWalletAddressValid(walletInput.strip()):
@@ -95,10 +94,10 @@ with ST.form("wallet_form", True):
                                 str(tx.get("chainId", "/")),
                                 str(tx.get("data", HexBytes("")).hex()),
                                 str(tx.get("from", "/")),
-                                str(tx.get("gas", 0)),
-                                str(tx.get("gasPrice", 0)),
-                                str(tx.get("maxFeePerGas", 0)),
-                                str(tx.get("maxPriorityFeePerGas", 0)),
+                                str(convertUnit(tx.get("gas", 0))),
+                                str(convertUnit(tx.get("gasPrice", 0))),
+                                str(convertUnit(tx.get("maxFeePerGas", 0))),
+                                str(convertUnit(tx.get("maxPriorityFeePerGas", 0))),
                                 str(tx.get("hash", HexBytes("")).hex()),
                                 str(tx.get("input", "/")),
                                 str(tx.get("nonce", 0)),
