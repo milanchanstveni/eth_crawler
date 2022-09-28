@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: ethereum-crawler
+    command: streamlit run app.py --server.runOnSave=true --server.address=0.0.0.0 --server.port=5000 --server.baseUrlPath=/app --server.enableCORS=true --ui.hideTopBar=true --ui.hideSidebarNav=true --theme.base=dark
+    ports: 
+      - 5000:5000
+    volumes:
+      - .:/app

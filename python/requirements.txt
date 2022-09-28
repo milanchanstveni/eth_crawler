@@ -1,0 +1,4 @@
+rich
+watchdog
+streamlit
+web3
