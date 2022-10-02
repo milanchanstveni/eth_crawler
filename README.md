@@ -63,7 +63,7 @@ target/debug/ethereum_crawler --address 0xXXXXXXXXXXXXXXXXXX
 ```
 or
 ```
-cd target/debug/ && ethereum_crawler --address 0xXXXXXXXXXXXXXXXXXX
+cd target/debug/ && ./ethereum_crawler --address 0xXXXXXXXXXXXXXXXXXX
 ```
 
 
