@@ -1,8 +1,5 @@
 # Ethereum transactions crawler task
 
-Dear **OriginTrail**, I wanted to say BIG thank you for this opportunity, I saw and learned some great stuff while working on this task.
-
-In desire to express myself on how much I want to work for with you, I was able to make 2 small apps for this task. GUI based one is written in Python and second one is CLI based written in Rust. On your website I saw that you are working with Rust so I hope you don't mind me challenging myself in order to try doing this task in Rust also.
 
 
 ## Python GUI-based app
@@ -67,7 +64,7 @@ cd target/debug/ && ./ethereum_crawler --address 0xXXXXXXXXXXXXXXXXXX
 ```
 
 
-Due to my private obligations and my current job, I was not able to add filtering blocks by given date, however CLI tool has option to filter by starting block:
+LI tool has option to filter by starting block:
 ```
 target/debug/ethereum_crawler --address 0xXXXXXXXXXXXXXXXX -b 14234234
 ```
