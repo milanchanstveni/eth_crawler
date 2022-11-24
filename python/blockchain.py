@@ -10,8 +10,8 @@ from typing import Union, Any
 import streamlit as ST
 
 
-ETHSCAN:   str       = "3SIH628PJECRU2FQHDG8AFS9J17J8K7NMJ"
-INFURA:    str       = "79a3a2554bd04a81b5e4a8bcd53d675f"
+ETHSCAN:   str       = "ETHSCAN_KEY"
+INFURA:    str       = "INFURA_KEY"
 DateValue: TypeAlias = Union[Date, Datetime, None]
 Number:    TypeAlias = Union[int, float]
 
