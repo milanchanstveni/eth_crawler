@@ -60,7 +60,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // ETH scan check
     // Check if provided wallet has some blocks
-    let mut url: String = "https://api.etherscan.io/api?module=account&action=txlist&startblock=0&offset=10000&sort=asc&apikey=3SIH628PJECRU2FQHDG8AFS9J17J8K7NMJ&contractaddress=0xdac17f958d2ee523a2206206994597c13d831ec7&address=".to_owned();
+    let mut url: String = "https://api.etherscan.io/api?module=account&action=txlist&startblock=0&offset=10000&sort=asc&apikey=<ETH_SCAN_API_KEY>&contractaddress=0xdac17f958d2ee523a2206206994597c13d831ec7&address=".to_owned();
 
     let full_url: String = url + &args.address;
     let mut body = reqwest::get(&full_url)
@@ -77,7 +77,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     
 
-    let transport = web3::transports::Http::new("https://mainnet.infura.io/v3/79a3a2554bd04a81b5e4a8bcd53d675f")?;
+    let transport = web3::transports::Http::new("https://mainnet.infura.io/v3/<INFURA_KEY>")?;
     let web3 = web3::Web3::new(transport);
 
     let mut accounts = web3.eth().accounts().await?;
